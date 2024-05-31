@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title>이름 변경</title>
+    <link rel="stylesheet" href="계정 화면 - 이름.css">
+</head>
+<body>
+    <div class="name-container">
+        <header class="name-header">
+            <button class="back-button" onclick="window.history.back();">←</button>
+            <h1>SkyWay 계정</h1>
+        </header>
+        <section class="name-section">
+            <h2>이름</h2>
+            <p>다른 사람들이 회원님을 언급할 때 사용되는 이름입니다.</p>
+            <form>
+                <label for="firstName">이름</label>
+                <div class="input-group">
+                    <input type="text" id="firstName" value="승현">
+                    <button type="button" class="clear-button">✕</button>
+                </div>
+                <label for="lastName">성</label>
+                <div class="input-group">
+                    <input type="text" id="lastName" value="손">
+                    <button type="button" class="clear-button">✕</button>
+                </div>
+                <button type="submit" class="update-button">업데이트</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

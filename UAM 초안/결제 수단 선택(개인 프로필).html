@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 수단 선택</title>
+    <link rel="stylesheet" href="결제 수단 선택(개인 프로필).css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="close">&times;</span>
+            <h1>결제 수단</h1>
+        </div>
+        <div class="profile-toggle">
+            <button id="personal-profile" class="active">개인 프로필</button>
+            <button id="business-profile">비즈니스 프로필</button>
+        </div>
+        <div class="section">
+            <h2>Uber Cash</h2>
+            <div class="toggle-switch">
+                <div class="label">
+                    <img src="card_icon.png" alt="카드 아이콘">
+                    <label>크레딧 0₩</label>
+                </div>
+                <input type="checkbox">
+            </div>
+        </div>
+        <div class="section">
+            <h2>결제 수단</h2>
+            <div class="payment-method">
+                <div class="method-label">
+                    <img src="payment_icon.png" alt="결제 아이콘">
+                    <span>직접 결제</span>
+                </div>
+                <input type="radio" name="payment" checked>
+            </div>
+            <div class="add-method">
+                <span>+ 결제 수단 추가</span>
+            </div>
+        </div>
+        <div class="section">
+            <h2>이용권</h2>
+            <div class="voucher">
+                <span>+ 이용권 코드 추가</span>
+                <button class="details-button">자세한 내용 확인하기</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

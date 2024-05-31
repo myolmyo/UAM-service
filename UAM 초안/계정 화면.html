@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title>계정 화면</title>
+    <link rel="stylesheet" href="계정 화면.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="user-info">
+                <span class="user-name">손승현</span>
+                <div class="user-avatar">
+                    <img src="avatar.png" alt="User Avatar" id="profileIcon">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button" id="dropdownButton">Personal <i class="icon-user"></i></button>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li data-value="Personal">Personal</li>
+                    <li data-value="Business">Business</li>
+                </ul>
+            </div>
+            <div class="quick-actions">
+                <button class="quick-action"><i class="icon-headset"></i><span>고객지원</span></button>
+                <button class="quick-action"><i class="icon-wallet"></i><span>지갑</span></button>
+                <button class="quick-action"><i class="icon-history"></i><span>활동 내역</span></button>
+            </div>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><i class="icon-settings"></i><span>설정</span></li>
+                <li><i class="icon-envelope"></i><span>메시지</span></li>
+                <li><i class="icon-briefcase"></i><span>비즈니스 허브</span></li>
+                <li><i class="icon-user"></i><span>SkyWay 계정 관리</span></li>
+                <li><i class="icon-info"></i><span>법적 고지</span></li>
+            </ul>
+        </nav>
+        <footer class="footer">
+            <span>v1.000</span>
+            <div class="footer-nav">
+                <button class="footer-button"><i class="icon-home"></i><span>홈</span></button>
+                <button class="footer-button"><i class="icon-services"></i><span>서비스</span></button>
+                <button class="footer-button"><i class="icon-activity"></i><span>활동</span></button>
+                <button class="footer-button"><i class="icon-account"></i><span>계정</span></button>
+            </div>
+        </footer>
+    </div>
+    <script src="계정 화면.js"></script>
+</body>
+</html>

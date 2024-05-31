@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>활동 화면</title>
+    <link rel="stylesheet" href="활동 화면.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>활동</h1>
+            <button class="filter-button" onclick="toggleFilter()">⚙️</button>
+        </header>
+        <section class="history">
+            <h2>이전 내역</h2>
+            <div class="history-item">
+                <div class="icon">🕒</div>
+                <div class="details">
+                    <p class="title">인천국제공항 제1여객터미널</p>
+                    <p class="address">인천광역시 중구 운서동 공항로 272</p>
+                </div>
+            </div>
+            <div class="history-item">
+                <div class="icon">🕒</div>
+                <div class="details">
+                    <p class="title">한국 폴리텍대학 (한국 폴리텍 본부)</p>
+                    <p class="address">인천광역시 부평구 무네미로 478</p>
+                </div>
+            </div>
+        </section>
+        <div class="filtering-criteria" id="filteringCriteria">
+            <h3>필터링 기준</h3>
+            <div class="profile">
+                <span>프로필</span>
+                <div class="profile-buttons">
+                    <button class="profile-button" id="personalButton" onclick="selectProfile('personal')">개인</button>
+                    <button class="profile-button" id="businessButton" onclick="selectProfile('business')">비즈니스</button>
+                </div>
+            </div>
+            <button class="apply-button">적용</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-item"><img src="home-icon.png" alt="home icon"><span>홈</span></a></li>
+                <li><a href="#" class="nav-item"><img src="service-icon.png" alt="service icon"><span>서비스</span></a></li>
+                <li><a href="#" class="nav-item active"><img src="activity-icon.png" alt="activity icon"><span>활동</span></a></li>
+                <li><a href="#" class="nav-item"><img src="account-icon.png" alt="account icon"><span>계정</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        function toggleFilter() {
+            const filter = document.getElementById('filteringCriteria');
+            if (filter.style.display === 'block') {
+                filter.style.display = 'none';
+            } else {
+                filter.style.display = 'block';
+            }
+        }
+
+        function selectProfile(profile) {
+            const personalButton = document.getElementById('personalButton');
+            const businessButton = document.getElementById('businessButton');
+            
+            if (profile === 'personal') {
+                personalButton.classList.add('active');
+                businessButton.classList.remove('active');
+            } else if (profile === 'business') {
+                personalButton.classList.remove('active');
+                businessButton.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
