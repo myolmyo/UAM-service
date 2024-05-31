@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>프로필 및 설정</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <h2>프로필 및 설정</h2>
+        <form class="profile-form">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="사용자 이름" value="김철수" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="이메일" value="son@example.com" required>
+            </div>
+            <h3>비밀번호 변경</h3>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="현재 비밀번호" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="새 비밀번호" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="새 비밀번호 확인" required>
+            </div>
+            <button type="submit" class="btn save-btn">저장</button>
+            <button type="button" class="btn logout-btn">로그아웃</button>
+            <div class="nav-bar">
+                <button type="button" class="nav-btn support-btn">
+                    <i class="fas fa-arrow-right"></i> <!-- 우측 화살표 아이콘 -->
+                </button>
+            </div>                   
+        </form>
+    </div>
+    <script>
+        document.querySelector('.logout-btn').addEventListener('click', () => {
+            // 로그아웃 기능 구현 (여기서는 콘솔 로그로 대체)
+            console.log('로그아웃 되었습니다.');
+            window.location.href = 'center.html'; 
+        });
+    </script>
+        <script>
+            document.querySelector('.support-btn').addEventListener('click', function() {
+                window.location.href = 'center.html'; 
+            });
+        </script>
+</body>
+</html>

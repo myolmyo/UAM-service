@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url('https://source.unsplash.com/random/1920x1080?city,night');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+}
+
+.vehicle-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.vehicle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle i {
+    font-size: 36px;
+    margin-right: 15px;
+    color: #333333;
+}
+
+.vehicle-info {
+    flex: 1;
+}
+
+.vehicle-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.vehicle-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #777777;
+}
+
+.vehicle-info .price {
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #555555;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #666;
+}
