@@ -34,7 +34,7 @@ header nav {
     gap: 10px;
 }
 
-header nav .btn {
+header nav .btn1 {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
@@ -44,7 +44,52 @@ header nav .btn {
     transition: background-color 0.3s, color 0.3s;
 }
 
-header nav .btn:hover {
+header nav .btn1:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+header nav .btn2 {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav .btn2:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+header nav .btn3 {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav .btn3:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+header nav .btn4 {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav .btn4:hover {
     background-color: #000;
     color: #fff;
 }
