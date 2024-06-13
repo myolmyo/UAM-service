@@ -225,7 +225,7 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
-    display: none; /* 기본적으로 숨김 */
+    display: none; 
 }
 
 button i {
