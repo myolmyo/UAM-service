@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyWay UAM 호출 서비스</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         <div class="logo">SkyWay</div>
         <nav>
-            <button class="btn">로그인</button>
-            <button class="btn">회원가입</button>
-            <button class="btn">프로필</button>
-            <button class="btn">고객 센터</button>
+            <button class="btn1">로그인</button>
+            <button class="btn2">회원가입</button>
+            <button class="btn3">프로필</button>
+            <button class="btn4">고객 센터</button>
         </nav>
     </header>
     <div class="background-overlay"></div>
@@ -37,5 +37,26 @@
     <footer>
         <p>© 2024 SkyWay 서비스. 모든 권리 보유.</p>
     </footer>
+    <script>
+        document.querySelector('.btn1').addEventListener('click', function() {
+            window.location.href = 'login.html'; 
+        });
+    </script>
+    <script>
+        document.querySelector('.btn2').addEventListener('click', function() {
+            window.location.href = 'login.html'; 
+        });
+    </script>
+    <script>
+        document.querySelector('.btn3').addEventListener('click', function() {
+            window.location.href = 'profile.html'; 
+        });
+    </script>
+    <script>
+         document.querySelector('.btn4').addEventListener('click', function() {
+            window.location.href = 'center.html'; 
+        });
+    </script>
 </body>
 </html>
+
