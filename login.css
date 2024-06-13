@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    position: relative; /* 부모 컨테이너에 대해 상대 위치 설정 */
+    position: relative; 
     width: 90%;
     max-width: 400px;
     background-color: rgba(255, 255, 255, 0.9);
