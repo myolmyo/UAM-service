@@ -40,7 +40,6 @@
         <p>© 2024 SkyWay 서비스. 모든 권리 보유.</p>
     </footer>
     <script>
-        // Add event listeners to the navigation buttons
         document.querySelector('.btn1').addEventListener('click', function() {
             window.location.href = 'login.html?form=signInForm'; 
         });
@@ -57,15 +56,30 @@
             window.location.href = 'center.html'; 
         });
 
-        // Function to generate random service status
         function getRandomServiceStatus() {
-            const planes = Math.floor(Math.random() * 20) + 1; // Random number between 1 and 20
-            const waitTime = Math.floor(Math.random() * 30) + 1; // Random number between 1 and 30
+            const planes = Math.floor(Math.random() * 20) + 1; 
+            const waitTime = Math.floor(Math.random() * 30) + 1; 
             return `가용 비행기 수: ${planes}대 | 예상 대기 시간: ${waitTime}분`;
         }
 
-        // Update service status with random values
         document.getElementById('service-status').textContent = getRandomServiceStatus();
+
+        let initialWaitTime = Math.floor(Math.random() * 30) + 1; 
+        let initialPlanes = Math.floor(Math.random() * 20) + 1; 
+    
+        function updateServiceStatus() {
+            const serviceStatusElement = document.getElementById('service-status');
+            
+            if (initialWaitTime > 0) {
+                initialWaitTime -= 1; 
+            }
+            
+            serviceStatusElement.textContent = `가용 비행기 수: ${initialPlanes}대 | 예상 대기 시간: ${initialWaitTime}분`;
+        }
+    
+        document.getElementById('service-status').textContent = `가용 비행기 수: ${initialPlanes}대 | 예상 대기 시간: ${initialWaitTime}분`;
+    
+        document.querySelector('.info-block.real-time-info').addEventListener('mouseover', updateServiceStatus);
     </script>
 </body>
 </html>
