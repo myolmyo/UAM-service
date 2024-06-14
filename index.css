@@ -1,3 +1,4 @@
+/* 기본 스타일 설정 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,12 +13,25 @@ body {
     overflow: hidden;
 }
 
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url('https://picsum.photos/1920/1080');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* 헤더 스타일 */
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;  
+    padding: 10px 40px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     box-sizing: border-box;
@@ -25,7 +39,7 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;  
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -34,66 +48,28 @@ header nav {
     gap: 10px;
 }
 
-header nav .btn1 {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px 10px;  
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header nav .btn1:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-header nav .btn2 {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px 10px;  
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header nav .btn2:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-header nav .btn3 {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px 10px;  
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header nav .btn3:hover {
-    background-color: #000;
-    color: #fff;
-}
-
+header nav .btn1, 
+header nav .btn2, 
+header nav .btn3, 
 header nav .btn4 {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
     border-radius: 5px;
-    padding: 5px 10px;  
+    padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
+header nav .btn1:hover, 
+header nav .btn2:hover, 
+header nav .btn3:hover, 
 header nav .btn4:hover {
     background-color: #000;
     color: #fff;
 }
 
+/* 섹션 스타일 */
 section {
     width: 80%;
     max-width: 800px;
@@ -116,16 +92,16 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .welcome-banner h1 {
     margin: 0;
-    font-size: 1.5em;  
+    font-size: 1.5em;
 }
 
 .welcome-banner p {
-    font-size: 1em;  
+    font-size: 1em;
 }
 
 .video-container {
@@ -136,41 +112,51 @@ section {
 }
 
 .video-container iframe {
-    width: 560px;  
-    height: 315px; 
+    width: 560px;
+    height: 315px;
 }
 
-.info-container {
+/* 정보 섹션 스타일 */
+.info-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;  
+    justify-content: space-between;
     width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 .info-block {
-    width: 18%; 
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 10px;
-    margin: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    max-width: 48%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.info-block:hover {
+    background-color: rgba(240, 240, 240, 0.9);
+    transform: translateY(-10px);
 }
 
 .info-block h2 {
-    margin: 0;
-    font-size: 1em;  
+    margin-top: 0;
+    font-size: 1.2em;
 }
 
 .info-block p {
-    font-size: 0.9em;  
+    font-size: 1em;
+    transition: opacity 0.5s;
 }
 
+/* 푸터 스타일 */
 footer {
     width: 100%;
     text-align: center;
@@ -180,21 +166,9 @@ footer {
     height: 10%;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
 }
 
 footer p {
     margin: 0;
-}
-
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url('https://picsum.photos/1920/1080');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
 }
