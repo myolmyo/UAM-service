@@ -56,12 +56,12 @@ h2 {
 
 .input-group {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 15px auto; 
     display: flex;
     align-items: center;
     background-color: #ffffff;
     border-radius: 25px;
-    padding: 10px 10px 10px 15px; 
+    padding: 10px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
