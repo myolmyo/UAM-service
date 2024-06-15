@@ -3,84 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>고객 센터</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="center.css">
+    <script src="center.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="container">
-        <header>
-            <h1>고객 센터</h1>
-        </header>
-        <div class="main-content">
-            <aside class="sidebar">
-                <ul>
-                    <li><a href="#faq">자주 묻는 질문</a></li>
-                    <li><a href="#contact">문의하기</a></li>
-                    <li><a href="#troubleshooting">문제 해결 가이드</a></li>
-                    <li><a href="#emergency">긴급 지원 정보</a></li>
-                    <li><a href="#feedback">피드백 남기기</a></li>
-                    <li><a href="#community">커뮤니티 포럼</a></li>
-                    <li><a href="#policy">법적 및 정책 정보</a></li>
-                </ul>
-            </aside>
-            <div class="content">
-                <section id="faq">
-                    <h2>자주 묻는 질문</h2>
-                    <div class="accordion">
-                        <div class="accordion-item">
-                            <button class="accordion-button">서비스 운영</button>
-                            <div class="accordion-content">
-                                <p>예약 방법, 결제 옵션, 취소 및 환불 정책, 서비스 시간, 특별 요구 사항 처리 방법 등을 포함합니다.</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button class="accordion-button">안전 기준</button>
-                            <div class="accordion-content">
-                                <p>UAM 비행의 안전 규정, 날씨 영향, 비행 전 안전 점검 리스트를 포함합니다.</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button class="accordion-button">기술 정보</button>
-                            <div class="accordion-content">
-                                <p>앱 사용 방법, 오류 해결, 계정 관리, 데이터 보호 정책을 포함합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="contact">
-                    <h2>문의하기</h2>
-                    <p>라이브 채팅: 실시간 지원을 받으세요.</p>
-                    <p>전화번호: 123-456-7890 (운영 시간: 09:00 - 18:00)</p>
-                    <p>이메일: support@example.com</p>
-                </section>
-                <section id="troubleshooting">
-                    <h2>문제 해결 가이드</h2>
-                    <p>앱 사용 중 발생할 수 있는 기술적 오류 해결 방법입니다.</p>
-                </section>
-                <section id="emergency">
-                    <h2>긴급 지원 정보</h2>
-                    <p>긴급 상황 시 연락할 수 있는 번호 및 절차입니다.</p>
-                </section>
-                <section id="feedback">
-                    <h2>피드백 남기기</h2>
-                    <form action="#" method="post">
-                        <textarea name="feedback" rows="4" cols="50" placeholder="여기에 피드백을 남겨주세요."></textarea>
-                        <button type="submit">보내기</button>
-                    </form>
-                </section>
-                <section id="community">
-                    <h2>커뮤니티 포럼</h2>
-                    <p>사용자들이 서로 경험을 공유하고 질문을 할 수 있는 커뮤니티 포럼 또는 소셜 미디어 그룹 링크를 제공합니다.</p>
-                </section>
-                <section id="policy">
-                    <h2>법적 및 정책 정보</h2>
-                    <p>서비스 이용 약관, 개인정보 보호 정책, 환불 및 취소 정책 등의 문서에 쉽게 접근할 수 있습니다.</p>
-                </section>
+    <header>
+        <h1>고객 센터</h1>
+        <nav>
+            <ul>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+                <li><a href="#contact">연락처 정보</a></li>
+                <li><a href="#forum">커뮤니티 포럼</a></li>
+                <li><a href="#policy">정책 정보</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </header>
+
+    <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <input type="text" id="faqSearch" placeholder="검색..." onkeyup="filterFAQs()">
+        <div id="faqList">
+            <div class="faq-item">
+                <p class="question">예약은 어떻게 하나요?</p>
+                <p class="answer">예약은 웹사이트를 통해 할 수 있습니다. 원하시는 시간을 선택해주세요.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">환불 정책은 무엇인가요?</p>
+                <p class="answer">배정 이전에는 전액 환불이 가능합니다.</p>
             </div>
         </div>
-        <footer>
-            <p>&copy; 2023 UAM 호출 서비스. All rights reserved.</p>
-        </footer>
+    </section>
+
+    <section id="contact">
+        <div class="card">
+            <h2><i class="fas fa-phone-alt"></i> 연락처 정보</h2>
+            <p><i class="fas fa-phone"></i> 전화번호: 000-111-2222</p>
+            <p><i class="fas fa-envelope"></i> 이메일: support@gmail.com</p>
+        </div>
+    </section>
+
+    <section id="forum">
+        <div class="card">
+            <h2><i class="fas fa-comments"></i> 커뮤니티 포럼</h2>
+            <p><a href="forum_link"><i class="fas fa-external-link-alt"></i> 커뮤니티 포럼 방문하기</a></p>
+        </div>
+    </section>
+
+    <section id="policy">
+        <div class="card">
+            <h2><i class="fas fa-file-alt"></i> 정책 정보</h2>
+            <p>여기에 이용 약관 및 개인정보 보호정책 정보를 제공합니다.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Company Name. All rights reserved.</p>
+    </footer>
+
+    <div id="chatContainer">
+        <div id="chatHistory"></div>
+        <input type="text" id="userInput" placeholder="질문을 입력해주세요..." onkeypress="if(event.keyCode==13) {sendMessage();}">
     </div>
 </body>
 </html>
