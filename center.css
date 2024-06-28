@@ -311,7 +311,7 @@ footer p {
 
 .nav-bar {
     position: absolute;
-    top: calc(20px + 1.3cm);
+    top: 65px; 
     right: 20px;
     display: flex;
 }
@@ -319,7 +319,7 @@ footer p {
 .nav-btn {
     width: 40px;
     height: 40px;
-    padding: 20;
+    padding: 20px; 
     background-color: #444;
     color: white;
     border: none;
@@ -335,3 +335,4 @@ footer p {
 .nav-btn:hover {
     background-color: #666;
 }
+
