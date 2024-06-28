@@ -72,5 +72,19 @@
         <div id="chatHistory"></div>
         <input type="text" id="userInput" placeholder="질문을 입력해주세요..." onkeypress="if(event.keyCode==13) {sendMessage();}">
     </div>
+
+
+</div>
+<div class="nav-bar">
+<button type="button" class="nav-btn support-btn">
+    <i class="fas fa-arrow-right"></i> 
+</button>
+</div> 
+</script>
+<script>
+    document.querySelector('.support-btn').addEventListener('click', function() {
+         window.location.href = 'weather.html'; 
+            });
+</script>
 </body>
 </html>
