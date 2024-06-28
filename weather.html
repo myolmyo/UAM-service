@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>실시간 트래픽 및 날씨 정보</title>
+    <link rel="stylesheet" href="weather.css">
+    <script src="weather.js" defer></script>
+    <style>
+       
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0; 
+        }
+    </style>
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUXuphjtmpFgkwXEmqUGlI_6RlVnkKJgk&callback=initMap" async defer></script>
+    <script>
+       
+        function initMap() {
+            var center = { lat: 37.4877, lng: 126.7213 }; 
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15, 
+                center: center
+            });
+
+            
+            var marker = new google.maps.Marker({
+                position: center,
+                map: map,
+                title: '대한민국 폴리텍 인천캠퍼스'
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>실시간 트래픽 및 날씨 정보</h1>
+    </header>
+
+    <section id="weather">
+        <h2>날씨 정보</h2>
+        <p>현재 위치의 날씨: <span id="current-weather"></span></p>
+        <button onclick="fetchWeather()">날씨 업데이트</button>
+    </section>
+
+    <section id="traffic">
+        <h2>트래픽 정보</h2>
+        <p>주요 도로의 트래픽 상황: <span id="current-traffic"></span></p>
+        <button onclick="fetchTraffic()">트래픽 업데이트</button>
+    </section>
+
+    <div id="map"></div>
+
+    <footer>
+        <p>© 2024 Company Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
