@@ -16,19 +16,19 @@
    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUXuphjtmpFgkwXEmqUGlI_6RlVnkKJgk&callback=initMap" async defer></script>
     <script>
-       
         function initMap() {
-            var center = { lat: 37.4877, lng: 126.7213 }; 
+            var polytechIncheon = {lat: 37.480035, lng: 126.754976}; 
+
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15, 
-                center: center
+                center: polytechIncheon, 
+                zoom: 17, 
+                mapTypeId: google.maps.MapTypeId.ROADMAP 
             });
 
-            
             var marker = new google.maps.Marker({
-                position: center,
+                position: polytechIncheon,
                 map: map,
-                title: '대한민국 폴리텍 인천캠퍼스'
+                title: '폴리텍 인천 캠퍼스'
             });
         }
     </script>
